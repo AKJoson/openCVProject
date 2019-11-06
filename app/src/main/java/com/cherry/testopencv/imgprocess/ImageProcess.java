@@ -1,4 +1,4 @@
-package com.cherry.testopencv;
+package com.cherry.testopencv.imgprocess;
 
 import android.graphics.Bitmap;
 

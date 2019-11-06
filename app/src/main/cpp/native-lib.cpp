@@ -6,14 +6,14 @@
 #include <opencv2/core.hpp>
 
 using namespace cv;
-#ifndef Java_com_cherry_testopencv_ImageProcess
-#define Java_com_cherry_testopencv_ImageProcess
+#ifndef Java_com_cherry_testopencv_imgprocess_ImageProcess
+#define Java_com_cherry_testopencv_imgprocess_ImageProcess
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 JNIEXPORT jobject JNICALL
-Java_com_cherry_testopencv_ImageProcess_processFace(JNIEnv *env, jclass thiz, jobject bitmap);
+Java_com_cherry_testopencv_imgprocess_ImageProcess_processFace(JNIEnv *env, jclass thiz, jobject bitmap);
 #ifdef __cplusplus
 }
 #endif
@@ -22,7 +22,7 @@ Java_com_cherry_testopencv_ImageProcess_processFace(JNIEnv *env, jclass thiz, jo
 extern "C"
 JNIEXPORT jobject JNICALL
 
-Java_com_cherry_testopencv_ImageProcess_processFace(JNIEnv *env, jclass thiz, jobject bitmap) {
+Java_com_cherry_testopencv_imgprocess_ImageProcess_processFace(JNIEnv *env, jclass thiz, jobject bitmap) {
     Mat matBitmap;
     //Bitmap 转Mat
 
