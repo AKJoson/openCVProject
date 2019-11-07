@@ -16,8 +16,9 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11"
-                abiFilters "arm64-v8a",  "armeabi-v7a"
-                arguments "-DANDROID_STL=c++_shared"   //  解决  dlopen failed: library "libc++_shared.so" not found 这个异常
+                abiFilters "arm64-v8a", "armeabi-v7a"
+                arguments "-DANDROID_STL=c++_shared"
+                //  解决  dlopen failed: library "libc++_shared.so" not found 这个异常
             }
         }
 
@@ -35,7 +36,7 @@ android {
         }
     }
 
-    dataBinding{
+    dataBinding {
         enabled = true
     }
     compileOptions {
@@ -51,6 +52,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.appcompat:appcompat:$rootProject.appcompat"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayout"
+    implementation 'com.android.support:support-v4:28.0.0'
     testImplementation "junit:junit:$rootProject.junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.extjunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressocoreVersion"
@@ -58,4 +60,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$rootProject.kotlinVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+    // kotlin for navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:2.1.0"
+    implementation "androidx.navigation:navigation-ui-ktx:2.1.0"
 }
