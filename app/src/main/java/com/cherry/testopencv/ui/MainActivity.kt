@@ -1,18 +1,11 @@
 package com.cherry.testopencv.ui
 
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.cherry.testopencv.R
 
-
-open class MainActivity : AppCompatActivity() , FragmentSplash.OnFragmentInteractionListener{
-
-    override fun onFragmentInteraction(uri: Uri) {
-        Log.e("TAG","onFragmentInteraction")
-    }
+open class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

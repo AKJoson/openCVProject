@@ -5,9 +5,27 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/splashFragment">
 
-    <fragment android:id="@+id/splashFragment"
+    <fragment
+        android:id="@+id/splashFragment"
         android:name="com.cherry.testopencv.ui.FragmentSplash"
         android:label="fragment_splash"
-        tools:layout = "@layout/fragment_splash"/>
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_in_main_fragment"
+            app:destination="@id/fragment_main" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.cherry.testopencv.ui.FragmentMain">
+        <action
+            android:id="@+id/action_in_fragment_camera"
+            app:destination="@id/action_in_fragment_camera" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_camera"
+        android:name="com.cherry.testopencv.ui.FragmentCamera" />
+
 
 </navigation>
